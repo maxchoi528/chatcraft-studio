@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-type="software">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="page-type" content="software">
+  <meta name="site-kind" content="software">
   <title>GDPR-Safe AI Chat Exporter &amp; API Key Auto-Redactor (100% Local)</title>
   <meta name="description" content="Automatically mask OpenAI API keys, JWT tokens, emails, phone numbers, IPs, and custom client names before exporting ChatGPT or Claude chats to PDF and Word.">
   <link rel="canonical" href="https://maxchoi528.github.io/chatcraft-studio/gdpr-ai-chat-redactor/">
@@ -20,7 +22,7 @@
   <meta name="twitter:image" content="https://maxchoi528.github.io/chatcraft-studio/assets/promo-tile-440x280.png">
   <link rel="icon" type="image/png" href="../assets/icon-128.png">
   <link rel="stylesheet" href="../assets/style.css">
-  
+  <script src="../assets/app.js" defer></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -71,10 +73,10 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Does auto-redaction modify my live conversation inside ChatGPT or Claude?",
+      "name": "Does auto-redaction alter my live chat history inside ChatGPT or Claude?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Redaction runs strictly on the extracted copy in memory when previewing and generating your exported PDF, Word, Markdown, or HTML deliverable."
+        "text": "No. Redaction transforms only the extracted copy inside memory when previewing and saving your Word, PDF, Markdown, or HTML file."
       }
     }
   ]
@@ -99,35 +101,77 @@
   </div>
 </header>
 <main>
-  <section class="article-hero">
-    <div class="container">
-      <h1>Auto-redact API keys, emails &amp; client names before sharing AI transcripts.</h1>
-      <p class="hero-lead">Never leak staging credentials or customer names in shared client decks. ChatCraft scrubs secrets inside browser memory before writing a single byte to Word, PDF, or Markdown.</p>
-      <div class="cta-group">
-        <a class="btn btn-primary" href="https://yujun57.gumroad.com/l/chatcraft-pro-lifetime" target="_blank" rel="noopener">Get Lifetime Pro — $14.90</a>
-        <a class="btn" href="../#install">View Extension Stores</a>
-        <a class="btn" href="../showcase/distributed-system-report.html">Inspect Live Sample</a>
+  <section class="hero" data-enter>
+    <div class="container hero-grid">
+      <div>
+        <h1>Auto-redact API keys, emails &amp; client names before sharing AI transcripts.</h1>
+        <p class="hero-lead">Consultants and developers routinely test prompts with real credentials or customer names. ChatCraft scrubs secrets locally in memory before writing your PDF, Word, or Markdown deliverable.</p>
+        <div class="cta-group">
+          <a class="btn btn-primary" href="https://yujun57.gumroad.com/l/chatcraft-pro-lifetime" target="_blank" rel="noopener">Get Lifetime Pro — $14.90 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <a class="btn" href="../#install">View Extension Stores</a>
+        </div>
+        <div class="meta-line">
+          <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 100% local in browser RAM</span>
+          <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Zero cloud uploads</span>
+          <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 7 AI platforms supported</span>
+        </div>
       </div>
+      <div class="specimen-card" aria-label="Interactive deliverable comparison preview">
+  <div class="specimen-bar">
+    <div class="tab-group" role="tablist">
+      <button class="tab-btn" type="button" role="tab" aria-selected="true" data-specimen-mode="clean">GDPR Redacted Export</button>
+      <button class="tab-btn" type="button" role="tab" aria-selected="false" data-specimen-mode="raw">Unredacted Raw Leak</button>
+    </div>
+    <a href="../showcase/distributed-system-report.html" style="font-size:12.5px;font-weight:600;text-decoration:none;">Full Sample &rarr;</a>
+  </div>
+  <div class="specimen-body" id="specimen-output">
+    <div id="specimen-clean"><strong>Sanitized Client Deliverable</strong><br>
+          <p style="margin:10px 0 0;line-height:1.6;">Staging summary for <span class="redact-pill">[REDACTED]</span>: auth key <span class="redact-pill">[REDACTED_API_KEY]</span>, contact <span class="redact-pill">[REDACTED_EMAIL]</span>, host <span class="redact-pill">[REDACTED_IP]</span>, phone <span class="redact-pill">[REDACTED_PHONE]</span>.</p></div>
+    <div id="specimen-raw" hidden>Staging summary for NordicCloud GmbH: auth key sk-proj-abc123def456ghi789, contact devops@nordiccloud.de, host 10.240.18.99, phone +49 30 901820.</div>
+  </div>
+  <div class="specimen-foot">
+    <span>Built in browser memory &middot; Zero cloud upload</span>
+    <span>7 AI platforms supported</span>
+  </div>
+</div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container prose-block">
-      
-        <h2>What ChatCraft masks automatically before export</h2>
+  <section class="section section-paper">
+    <div class="container prose-grid">
+      <article class="prose-block">
+        
+        <h2>What ChatCraft masks automatically inside your browser</h2>
         <ul>
           <li><strong>API &amp; Auth Secrets:</strong> <code>sk-...</code> keys, Bearer tokens, and JWT strings become <code>[REDACTED_API_KEY]</code>.</li>
-          <li><strong>Contact Identifiers:</strong> Email addresses and international phone numbers (EU, US, CN formats) become <code>[REDACTED_EMAIL]</code> and <code>[REDACTED_PHONE]</code>.</li>
-          <li><strong>Network &amp; Payment Strings:</strong> IPv4 host addresses and card patterns are redacted locally.</li>
-          <li><strong>Custom Client &amp; Project Names:</strong> Enter comma-separated company or project names (such as <code>NordicCloud GmbH, Project Atlas</code>) in the Studio to mask every occurrence in headings, tables, and code comments.</li>
+          <li><strong>Contact Identifiers:</strong> Email addresses and international phone formats (EU, US, CN) convert to <code>[REDACTED_EMAIL]</code> and <code>[REDACTED_PHONE]</code>.</li>
+          <li><strong>Network &amp; Payment Data:</strong> IPv4 staging hosts and card number patterns are masked locally.</li>
+          <li><strong>Custom Client Names:</strong> Enter comma-separated company or project names (e.g., <code>NordicCloud GmbH, Project Atlas</code>) in the Studio to mask headings, tables, and code comments alike.</li>
         </ul>
         <div class="callout-box">
-          <strong>Audit-friendly architecture:</strong> Manifest V3 CSP enforces <code>script-src 'self'</code> with zero remote code execution and zero analytics trackers. Read our <a href="../privacy/">Privacy Policy</a>.
+          <strong>Verify permissions &amp; privacy architecture:</strong> Read our <a href="../privacy/">Zero-Server Privacy Policy</a> &mdash; zero remote code, zero analytics trackers.
         </div>
-      <h2>Quick Answers</h2>
-      <div class="faq-list">
-        <details open><summary>Does auto-redaction modify my live conversation inside ChatGPT or Claude?</summary><p>No. Redaction runs strictly on the extracted copy in memory when previewing and generating your exported PDF, Word, Markdown, or HTML deliverable.</p></details>
-      </div>
+        <h2>Quick Technical Answers</h2>
+        <div class="faq-list">
+          <details open><summary>Does auto-redaction alter my live chat history inside ChatGPT or Claude?</summary><p>No. Redaction transforms only the extracted copy inside memory when previewing and saving your Word, PDF, Markdown, or HTML file.</p></details>
+        </div>
+      </article>
+
+      <aside class="sidebar-card">
+        <strong style="font-size:17px;display:block;margin-bottom:10px;">Automated Redaction Rules</strong>
+        <p style="font-size:13.5px;color:var(--ink-muted);margin:0 0 16px;">Pay $14.90 once for up to 3 machines or $2.99/mo. Zero account setup.</p>
+        <ul class="feature-list" style="margin-bottom:20px;">
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> OpenAI, GitHub, Bearer &amp; JWT secrets</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Emails &amp; international phone patterns</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> IPv4 network hosts &amp; payment card numbers</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Custom comma-separated client/project names</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Strict MV3 CSP <code>script-src 'self'</code></li>
+        </ul>
+        <div style="display:grid;gap:10px;">
+          <a class="btn btn-primary" href="https://yujun57.gumroad.com/l/chatcraft-pro-lifetime" target="_blank" rel="noopener">Get Lifetime Pro — $14.90</a>
+          <a class="btn" href="../showcase/distributed-system-report.html">Inspect Live HTML Sample</a>
+        </div>
+      </aside>
     </div>
   </section>
 </main>
@@ -136,7 +180,7 @@
     <div class="footer-grid">
       <div>
         <h3>ChatCraft Studio Pro</h3>
-        <p>100% local browser extension for Edge, Firefox, and Chrome. Turn AI conversations into publication-grade Word (.docx), PDF, Markdown, and Code ZIP deliverables without cloud uploads.</p>
+        <p>100% local browser extension for Edge, Firefox, and Chrome. Turn AI conversations into native Word (.docx), Vector PDF, Markdown, and Code ZIP deliverables with zero cloud uploads.</p>
       </div>
       <div>
         <h3>Workflows</h3>
@@ -167,8 +211,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 ChatCraft Studio Pro · Yujun Cui</span>
-      <span>Zero external telemetry · Works offline inside your browser</span>
+      <span>&copy; 2026 ChatCraft Studio Pro &middot; Yujun Cui</span>
+      <span>Desktop Chrome, Edge &amp; Firefox &middot; Zero external telemetry</span>
     </div>
   </div>
 </footer>
