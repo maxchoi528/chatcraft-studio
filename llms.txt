@@ -2,13 +2,13 @@
 > 100% local browser extension (Firefox, Microsoft Edge, Chrome) that exports ChatGPT, Claude, Google Gemini, DeepSeek, Grok, Perplexity, and Microsoft Copilot conversations to native Microsoft Word (.docx), Vector PDF, Obsidian Markdown (.md), Standalone HTML, Cross-AI Context Bundles, and Code .zip archives.
 
 ## Key URLs
-- Homepage: https://maxchoi528.github.io/chatcraft-studio/
-- Export ChatGPT to Word (.docx): https://maxchoi528.github.io/chatcraft-studio/chatgpt-to-word-docx/
-- Export DeepSeek & Claude to PDF & Code ZIP: https://maxchoi528.github.io/chatcraft-studio/deepseek-claude-to-pdf/
-- GDPR Local Privacy Redaction: https://maxchoi528.github.io/chatcraft-studio/gdpr-ai-chat-redactor/
-- German (DACH) Overview: https://maxchoi528.github.io/chatcraft-studio/de/
-- Live Generated Sample Report: https://maxchoi528.github.io/chatcraft-studio/showcase/distributed-system-report.html
-- Privacy Policy: https://maxchoi528.github.io/chatcraft-studio/privacy/
+- Homepage: https://chatcraft.pages.dev/
+- Export ChatGPT to Word (.docx): https://chatcraft.pages.dev/chatgpt-to-word-docx/
+- Export DeepSeek & Claude to PDF & Code ZIP: https://chatcraft.pages.dev/deepseek-claude-to-pdf/
+- GDPR Local Privacy Redaction: https://chatcraft.pages.dev/gdpr-ai-chat-redactor/
+- German (DACH) Overview: https://chatcraft.pages.dev/de/
+- Live Generated Sample Report: https://chatcraft.pages.dev/showcase/distributed-system-report.html
+- Privacy Policy: https://chatcraft.pages.dev/privacy/
 
 ## Pricing & Store Channels
 - Free Edition: Core Q&A extraction, Cross-AI Context Bundle, Markdown, watermarked PDF/HTML
