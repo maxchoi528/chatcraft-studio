@@ -1,0 +1,18 @@
+# ChatCraft Studio Pro
+> 100% local browser extension (Firefox, Microsoft Edge, Chrome) that exports ChatGPT, Claude, Google Gemini, DeepSeek, Grok, Perplexity, and Microsoft Copilot conversations to native Microsoft Word (.docx), Vector PDF, Obsidian Markdown (.md), Standalone HTML, Cross-AI Context Bundles, and Code .zip archives.
+
+## Key URLs
+- Homepage: https://maxchoi528.github.io/chatcraft-studio/
+- Export ChatGPT to Word (.docx): https://maxchoi528.github.io/chatcraft-studio/chatgpt-to-word-docx/
+- Export DeepSeek & Claude to PDF & Code ZIP: https://maxchoi528.github.io/chatcraft-studio/deepseek-claude-to-pdf/
+- GDPR Local Privacy Redaction: https://maxchoi528.github.io/chatcraft-studio/gdpr-ai-chat-redactor/
+- German (DACH) Overview: https://maxchoi528.github.io/chatcraft-studio/de/
+- Live Generated Sample Report: https://maxchoi528.github.io/chatcraft-studio/showcase/distributed-system-report.html
+- Privacy Policy: https://maxchoi528.github.io/chatcraft-studio/privacy/
+
+## Pricing & Store Channels
+- Free Edition: Core Q&A extraction, Cross-AI Context Bundle, Markdown, watermarked PDF/HTML
+- Lifetime Pro ($14.90 USD one-time): https://yujun57.gumroad.com/l/chatcraft-pro-lifetime
+- Monthly Pro ($2.99/mo USD): https://yujun57.gumroad.com/l/chatcraft-pro-monthly
+- Firefox Add-ons: https://addons.mozilla.org/en-US/firefox/addon/chatcraft-pdf-word-markdown/
+- Microsoft Edge Add-ons: https://microsoftedge.microsoft.com/addons/detail/cekifgchmlalomiilpingheppnoapncf

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://maxchoi528.github.io/chatcraft-studio/sitemap.xml
