@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-type="software">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="page-type" content="software">
+  <meta name="site-kind" content="software">
   <title>Export DeepSeek, Claude &amp; Gemini Chats to PDF, Markdown &amp; Code ZIP</title>
   <meta name="description" content="Turn DeepSeek R1 reasoning chains, Claude Artifacts, and Gemini threads into vector print PDFs, Obsidian Markdown, and one-click code .zip archives locally.">
   <link rel="canonical" href="https://maxchoi528.github.io/chatcraft-studio/deepseek-claude-to-pdf/">
@@ -20,7 +22,7 @@
   <meta name="twitter:image" content="https://maxchoi528.github.io/chatcraft-studio/assets/promo-tile-440x280.png">
   <link rel="icon" type="image/png" href="../assets/icon-128.png">
   <link rel="stylesheet" href="../assets/style.css">
-  
+  <script src="../assets/app.js" defer></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -74,15 +76,15 @@
       "name": "Does PDF export work offline without external rendering servers?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. ChatCraft applies print-optimized A4 CSS rules and triggers native browser vector PDF output so text remains selectable and crisp at any zoom level."
+        "text": "Yes. ChatCraft applies print-optimized A4 CSS rules and triggers native browser vector PDF generation so text and tables remain sharp vectors at any zoom level."
       }
     },
     {
       "@type": "Question",
-      "name": "What happens if DeepSeek or Gemini changes their website markup?",
+      "name": "What happens if DeepSeek or Gemini updates their webpage markup?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "ChatCraft uses a three-layer architecture: DOM selectors, semantic heuristic extraction, and a built-in Selection Importer / Universal Markdown Parser inside the Studio."
+        "text": "ChatCraft combines provider selectors, semantic heuristics, and a Universal Selection / Markdown Paste Importer inside the Studio as fallback."
       }
     }
   ]
@@ -107,34 +109,88 @@
   </div>
 </header>
 <main>
-  <section class="article-hero">
-    <div class="container">
-      <h1>Save DeepSeek, Claude &amp; Gemini chats as print-ready PDF, Markdown &amp; Code ZIPs.</h1>
-      <p class="hero-lead">Preserve DeepSeek &lt;think&gt; reasoning blocks cleanly, inline Claude Artifacts into standalone documents, or bundle every generated script into an instant .zip archive.</p>
-      <div class="cta-group">
-        <a class="btn btn-primary" href="https://yujun57.gumroad.com/l/chatcraft-pro-lifetime" target="_blank" rel="noopener">Get Lifetime Pro — $14.90</a>
-        <a class="btn" href="../#install">View Extension Stores</a>
-        <a class="btn" href="../showcase/distributed-system-report.html">Inspect Live Sample</a>
+  <section class="hero" data-enter>
+    <div class="container hero-grid">
+      <div>
+        <h1>Save DeepSeek, Claude &amp; Gemini chats as clean PDF, Markdown &amp; Code ZIPs.</h1>
+        <p class="hero-lead">Keep DeepSeek &lt;think&gt; reasoning blocks organized, inline Claude Artifacts into single standalone deliverables, or download every generated script in one .zip archive.</p>
+        <div class="cta-group">
+          <a class="btn btn-primary" href="https://yujun57.gumroad.com/l/chatcraft-pro-lifetime" target="_blank" rel="noopener">Get Lifetime Pro — $14.90 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <a class="btn" href="../#install">View Extension Stores</a>
+        </div>
+        <div class="meta-line">
+          <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 100% local in browser RAM</span>
+          <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Zero cloud uploads</span>
+          <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 7 AI platforms supported</span>
+        </div>
       </div>
+      <div class="specimen-card" aria-label="Interactive deliverable comparison preview">
+  <div class="specimen-bar">
+    <div class="tab-group" role="tablist">
+      <button class="tab-btn" type="button" role="tab" aria-selected="true" data-specimen-mode="clean">Structured Print PDF</button>
+      <button class="tab-btn" type="button" role="tab" aria-selected="false" data-specimen-mode="nord">Nord Theme Output</button>
+      <button class="tab-btn" type="button" role="tab" aria-selected="false" data-specimen-mode="raw">Browser Ctrl+P Cutoffs</button>
+    </div>
+    <a href="../showcase/distributed-system-report.html" style="font-size:12.5px;font-weight:600;text-decoration:none;">Full Sample &rarr;</a>
+  </div>
+  <div class="specimen-body" id="specimen-output">
+    <div id="specimen-clean"><strong>DeepSeek R1 &amp; Claude Artifact Deliverable</strong><br>
+          <span style="font-size:12px;opacity:0.8;">&lt;think&gt; reasoning filtered &middot; Landscape A4 table scaling</span>
+          <table>
+            <thead><tr><th>Mode</th><th>Output File</th><th>Best For</th></tr></thead>
+            <tbody>
+              <tr><td>Vector PDF</td><td><code>architecture-report.pdf</code></td><td>Client delivery</td></tr>
+              <tr><td>Obsidian MD</td><td><code>thread-notes.md</code></td><td>PKM &amp; Notion</td></tr>
+              <tr><td>Code Bundle</td><td><code>all-scripts.zip</code></td><td>Engineering handoff</td></tr>
+            </tbody>
+          </table></div>
+    <div id="specimen-raw" hidden>[Browser Ctrl+P Print Bug]
+- Left sidebar navigation overlaps article body
+- Long Python code blocks clip horizontally at column 72
+- Pages break awkwardly mid-table</div>
+  </div>
+  <div class="specimen-foot">
+    <span>Built in browser memory &middot; Zero cloud upload</span>
+    <span>7 AI platforms supported</span>
+  </div>
+</div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container prose-block">
-      
-        <h2>Built for modern AI workflows beyond plain text</h2>
-        <p>Developers and analysts don't just ask single questions — you iterate through reasoning models, wide comparison tables, and multi-file code snippets across ChatGPT, Claude, DeepSeek, Grok, and Perplexity.</p>
+  <section class="section section-paper">
+    <div class="container prose-grid">
+      <article class="prose-block">
+        
+        <h2>Built for technical workflows beyond plain chat text</h2>
+        <p>Standard browser printing slices code blocks in half and captures page sidebars. ChatCraft extracts clean semantic turns first, filters noise, and applies A4 print rules.</p>
         <ul>
           <li><strong>2026 Smart Content Filters:</strong> Toggle AI Thinking blocks (<code>&lt;think&gt;</code>), Web Search Citations, and Claude Artifacts individually before exporting.</li>
-          <li><strong>Landscape PDF Toggle:</strong> Flip wide benchmark tables to A4 Landscape mode so columns never clip off the right margin.</li>
-          <li><strong>All Code Blocks (.zip):</strong> Extract every fenced code block across a long coding conversation into named files inside one clean archive.</li>
-          <li><strong>Cross-AI Context Bundle (CtxPort v2):</strong> Package your active conversation into a compact context handoff block when hitting rate limits and moving to another AI provider.</li>
+          <li><strong>Landscape PDF Toggle:</strong> Flip wide benchmark matrices onto A4 Landscape pages so columns never clip off the right margin.</li>
+          <li><strong>All Code Blocks (.zip):</strong> Package every fenced snippet in a long coding session into properly named files inside one clean archive.</li>
+          <li><strong>Cross-AI Context Bundle (CtxPort v2):</strong> Hitting usage limits on ChatGPT? Copy a compact token-estimated bundle and resume seamlessly in Claude or DeepSeek.</li>
         </ul>
-      <h2>Quick Answers</h2>
-      <div class="faq-list">
-        <details open><summary>Does PDF export work offline without external rendering servers?</summary><p>Yes. ChatCraft applies print-optimized A4 CSS rules and triggers native browser vector PDF output so text remains selectable and crisp at any zoom level.</p></details>
-        <details open><summary>What happens if DeepSeek or Gemini changes their website markup?</summary><p>ChatCraft uses a three-layer architecture: DOM selectors, semantic heuristic extraction, and a built-in Selection Importer / Universal Markdown Parser inside the Studio.</p></details>
-      </div>
+        <h2>Quick Technical Answers</h2>
+        <div class="faq-list">
+          <details open><summary>Does PDF export work offline without external rendering servers?</summary><p>Yes. ChatCraft applies print-optimized A4 CSS rules and triggers native browser vector PDF generation so text and tables remain sharp vectors at any zoom level.</p></details>
+          <details open><summary>What happens if DeepSeek or Gemini updates their webpage markup?</summary><p>ChatCraft combines provider selectors, semantic heuristics, and a Universal Selection / Markdown Paste Importer inside the Studio as fallback.</p></details>
+        </div>
+      </article>
+
+      <aside class="sidebar-card">
+        <strong style="font-size:17px;display:block;margin-bottom:10px;">PDF, Markdown &amp; Code Specs</strong>
+        <p style="font-size:13.5px;color:var(--ink-muted);margin:0 0 16px;">Pay $14.90 once for up to 3 machines or $2.99/mo. Zero account setup.</p>
+        <ul class="feature-list" style="margin-bottom:20px;">
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Toggle DeepSeek <code>&lt;think&gt;</code> &amp; Web Citations</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Inline Claude Artifacts / Canvas blocks</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> A4 Portrait or Landscape wide-table PDF</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 24 light &amp; dark Base46-inspired CSS themes</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Cross-AI Context Bundle (CtxPort v2)</li>
+        </ul>
+        <div style="display:grid;gap:10px;">
+          <a class="btn btn-primary" href="https://yujun57.gumroad.com/l/chatcraft-pro-lifetime" target="_blank" rel="noopener">Get Lifetime Pro — $14.90</a>
+          <a class="btn" href="../showcase/distributed-system-report.html">Inspect Live HTML Sample</a>
+        </div>
+      </aside>
     </div>
   </section>
 </main>
@@ -143,7 +199,7 @@
     <div class="footer-grid">
       <div>
         <h3>ChatCraft Studio Pro</h3>
-        <p>100% local browser extension for Edge, Firefox, and Chrome. Turn AI conversations into publication-grade Word (.docx), PDF, Markdown, and Code ZIP deliverables without cloud uploads.</p>
+        <p>100% local browser extension for Edge, Firefox, and Chrome. Turn AI conversations into native Word (.docx), Vector PDF, Markdown, and Code ZIP deliverables with zero cloud uploads.</p>
       </div>
       <div>
         <h3>Workflows</h3>
@@ -174,8 +230,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 ChatCraft Studio Pro · Yujun Cui</span>
-      <span>Zero external telemetry · Works offline inside your browser</span>
+      <span>&copy; 2026 ChatCraft Studio Pro &middot; Yujun Cui</span>
+      <span>Desktop Chrome, Edge &amp; Firefox &middot; Zero external telemetry</span>
     </div>
   </div>
 </footer>
