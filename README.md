@@ -1,6 +1,6 @@
 # ChatCraft Studio Pro — Export AI Chats to Word (.docx), PDF & Markdown Locally
 
-**Official Showcase Website:** [https://maxchoi528.github.io/chatcraft-studio/](https://maxchoi528.github.io/chatcraft-studio/)
+**Official Showcase Website:** [https://chatcraft.pages.dev/](https://chatcraft.pages.dev/)
 
 **ChatCraft Studio Pro** turns long AI conversations from **ChatGPT, Claude, Google Gemini, DeepSeek, Grok, Perplexity, and Microsoft Copilot** into publication-ready documents **100% locally inside your browser** — with zero cloud uploads.
 
@@ -17,9 +17,9 @@
 
 ## Install & Documentation
 
-- **Product Website & Interactive Preview:** [https://maxchoi528.github.io/chatcraft-studio/](https://maxchoi528.github.io/chatcraft-studio/)
-- **Live HTML Report Sample:** [Inspect Distributed System Report](https://maxchoi528.github.io/chatcraft-studio/showcase/distributed-system-report.html)
+- **Product Website & Interactive Preview:** [https://chatcraft.pages.dev/](https://chatcraft.pages.dev/)
+- **Live HTML Report Sample:** [Inspect Distributed System Report](https://chatcraft.pages.dev/showcase/distributed-system-report.html)
 - **Firefox Add-ons:** [Install for Firefox](https://addons.mozilla.org/en-US/firefox/addon/chatcraft-pdf-word-markdown/) *(currently Awaiting Review)*
 - **Microsoft Edge Add-ons:** [Edge Add-ons Listing](https://microsoftedge.microsoft.com/addons/detail/cekifgchmlalomiilpingheppnoapncf) *(currently In Review — Store ID `0RDCKF06G05C`)*
 - **Pro Lifetime License ($14.90):** [Get Lifetime Pro on Gumroad](https://yujun57.gumroad.com/l/chatcraft-pro-lifetime)
-- **Privacy Policy (Zero-Server Architecture):** [https://maxchoi528.github.io/chatcraft-studio/privacy/](https://maxchoi528.github.io/chatcraft-studio/privacy/)
+- **Privacy Policy (Zero-Server Architecture):** [https://chatcraft.pages.dev/privacy/](https://chatcraft.pages.dev/privacy/)
