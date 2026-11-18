@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Export ChatGPT, Claude &amp; DeepSeek Tables to Word (.docx) Cleanly | ChatCraft</title>
+  <meta name="description" content="Convert ChatGPT, Claude, and DeepSeek conversations into real Microsoft Word (.docx) documents without broken tables, ugly markdown syntax, or cloud uploads.">
+  <link rel="canonical" href="https://maxchoi528.github.io/chatcraft-studio/chatgpt-to-word-docx/">
+  <link rel="alternate" hreflang="en" href="https://maxchoi528.github.io/chatcraft-studio/">
+  <link rel="alternate" hreflang="de" href="https://maxchoi528.github.io/chatcraft-studio/de/">
+  <link rel="alternate" hreflang="x-default" href="https://maxchoi528.github.io/chatcraft-studio/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Export ChatGPT, Claude &amp; DeepSeek Tables to Word (.docx) Cleanly | ChatCraft">
+  <meta property="og:description" content="Convert ChatGPT, Claude, and DeepSeek conversations into real Microsoft Word (.docx) documents without broken tables, ugly markdown syntax, or cloud uploads.">
+  <meta property="og:url" content="https://maxchoi528.github.io/chatcraft-studio/chatgpt-to-word-docx/">
+  <meta property="og:image" content="https://maxchoi528.github.io/chatcraft-studio/assets/promo-tile-440x280.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Export ChatGPT, Claude &amp; DeepSeek Tables to Word (.docx) Cleanly | ChatCraft">
+  <meta name="twitter:description" content="Convert ChatGPT, Claude, and DeepSeek conversations into real Microsoft Word (.docx) documents without broken tables, ugly markdown syntax, or cloud uploads.">
+  <meta name="twitter:image" content="https://maxchoi528.github.io/chatcraft-studio/assets/promo-tile-440x280.png">
+  <link rel="icon" type="image/png" href="../assets/icon-128.png">
+  <link rel="stylesheet" href="../assets/style.css">
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ChatCraft: AI Chat to PDF, Word & Markdown",
+  "alternateName": "ChatCraft Studio Pro",
+  "applicationCategory": "ProductivityApplication",
+  "operatingSystem": "Windows, macOS, Linux (Firefox, Microsoft Edge, Google Chrome)",
+  "url": "https://maxchoi528.github.io/chatcraft-studio/",
+  "downloadUrl": "https://addons.mozilla.org/en-US/firefox/addon/chatcraft-pdf-word-markdown/",
+  "softwareVersion": "1.0.0",
+  "featureList": [
+    "Native Microsoft Word (.docx) export generated 100% locally",
+    "Print-ready Vector PDF with portrait/landscape table layout",
+    "Executive Report Mode (strip user prompts + Table of Contents)",
+    "Cross-AI Context Bundle (CtxPort v2) and All Code Blocks .zip archive",
+    "GDPR automatic secret & PII redaction (API keys, emails, IPs, custom client names)",
+    "Supports ChatGPT, Claude, Google Gemini, DeepSeek, Grok, Perplexity, Microsoft Copilot"
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "price": "0.00",
+      "priceCurrency": "USD",
+      "name": "Free Edition"
+    },
+    {
+      "@type": "Offer",
+      "price": "14.90",
+      "priceCurrency": "USD",
+      "name": "Pro Lifetime License",
+      "url": "https://yujun57.gumroad.com/l/chatcraft-pro-lifetime"
+    },
+    {
+      "@type": "Offer",
+      "price": "2.99",
+      "priceCurrency": "USD",
+      "name": "Monthly Pro",
+      "url": "https://yujun57.gumroad.com/l/chatcraft-pro-monthly"
+    }
+  ]
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does Microsoft Word open the exported .docx file without warnings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. ChatCraft builds standard OpenXML parts ([Content_Types].xml, word/document.xml, word/styles.xml, _rels/.rels) with valid CRC32 checksums tested against Word, LibreOffice Writer, and Google Docs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I edit AI messages before downloading the Word file?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Inside the Studio you can check or uncheck specific turns, edit paragraph text inline, and adjust the document title before exporting."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-row">
+    <a class="brand" href="../index.html">
+      <svg width="26" height="26" viewBox="0 0 28 28" fill="none" aria-hidden="true"><rect width="28" height="28" rx="7" fill="#1d4ed8"/><path d="M18.5 9.5A6 6 0 1 0 18.5 18.5" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"/><line x1="12" y1="12.5" x2="18.5" y2="12.5" stroke="#ffffff" stroke-width="2.1" stroke-linecap="round"/><line x1="12" y1="16" x2="20" y2="16" stroke="#ffffff" stroke-width="2.1" stroke-linecap="round"/><circle cx="20.5" cy="7.5" r="2.3" fill="#fbbf24"/></svg>
+      <span>ChatCraft Studio Pro</span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="../chatgpt-to-word-docx/" >Word (.docx)</a>
+      <a href="../deepseek-claude-to-pdf/" >PDF &amp; Markdown</a>
+      <a href="../gdpr-ai-chat-redactor/" >GDPR Privacy</a>
+      <a href="../showcase/distributed-system-report.html">Live Sample</a>
+      <a href="../de/" >Deutsch</a>
+      <a class="btn btn-primary btn-sm" href="https://yujun57.gumroad.com/l/chatcraft-pro-lifetime" target="_blank" rel="noopener">Get Pro ($14.90)</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="article-hero">
+    <div class="container">
+      <h1>Export ChatGPT &amp; DeepSeek conversations directly to native Word (.docx).</h1>
+      <p class="hero-lead">Copy-pasting AI tables and bulleted reports into Microsoft Word destroys cell borders and mixes chat banter into your deliverable. ChatCraft compiles genuine OpenXML .docx files directly inside your browser.</p>
+      <div class="cta-group">
+        <a class="btn btn-primary" href="https://yujun57.gumroad.com/l/chatcraft-pro-lifetime" target="_blank" rel="noopener">Get Lifetime Pro — $14.90</a>
+        <a class="btn" href="../#install">View Extension Stores</a>
+        <a class="btn" href="../showcase/distributed-system-report.html">Inspect Live Sample</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container prose-block">
+      
+        <h2>Why standard browser copy-paste breaks in Microsoft Word</h2>
+        <p>When you highlight a ChatGPT or DeepSeek response and paste into Word, clipboard HTML brings dark-mode background CSS, raw Markdown pipe symbols (<code>| col |</code>), and repetitive prompt blocks. You end up spending 15 minutes manually deleting lines and re-formatting tables.</p>
+        <h2>How ChatCraft's in-browser OpenXML compiler fixes it</h2>
+        <ul>
+          <li><strong>Native Word Tables &amp; Headings:</strong> Converts Markdown tables into real Word <code>w:tbl</code> elements with styled dark headers and bordered cells.</li>
+          <li><strong>Executive Report Mode (Hide Prompts):</strong> Removes every user prompt block so only polished AI sections merge into a deliverable report with an optional Table of Contents.</li>
+          <li><strong>100% Local Processing:</strong> Unlike online converter websites that ingest your confidential chat links, ChatCraft builds the entire ZIP/OpenXML <code>.docx</code> archive inside local memory.</li>
+        </ul>
+        <div class="callout-box">
+          <strong>Verify the output quality:</strong> Open our <a href="../showcase/distributed-system-report.html">Live Sample Report</a> to inspect how multi-column benchmark tables, reasoning notes, and redacted tokens render cleanly.
+        </div>
+      <h2>Quick Answers</h2>
+      <div class="faq-list">
+        <details open><summary>Does Microsoft Word open the exported .docx file without warnings?</summary><p>Yes. ChatCraft builds standard OpenXML parts ([Content_Types].xml, word/document.xml, word/styles.xml, _rels/.rels) with valid CRC32 checksums tested against Word, LibreOffice Writer, and Google Docs.</p></details>
+        <details open><summary>Can I edit AI messages before downloading the Word file?</summary><p>Yes. Inside the Studio you can check or uncheck specific turns, edit paragraph text inline, and adjust the document title before exporting.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>ChatCraft Studio Pro</h3>
+        <p>100% local browser extension for Edge, Firefox, and Chrome. Turn AI conversations into publication-grade Word (.docx), PDF, Markdown, and Code ZIP deliverables without cloud uploads.</p>
+      </div>
+      <div>
+        <h3>Workflows</h3>
+        <ul>
+          <li><a href="../chatgpt-to-word-docx/">ChatGPT to Word (.docx)</a></li>
+          <li><a href="../deepseek-claude-to-pdf/">DeepSeek &amp; Claude to PDF</a></li>
+          <li><a href="../gdpr-ai-chat-redactor/">GDPR Secret Auto-Redaction</a></li>
+          <li><a href="../showcase/distributed-system-report.html">Sample HTML Report</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Install &amp; Pricing</h3>
+        <ul>
+          <li><a href="https://addons.mozilla.org/en-US/firefox/addon/chatcraft-pdf-word-markdown/" target="_blank" rel="noopener">Firefox Add-ons</a></li>
+          <li><a href="../#install">Microsoft Edge Add-ons</a></li>
+          <li><a href="https://yujun57.gumroad.com/l/chatcraft-pro-lifetime" target="_blank" rel="noopener">Lifetime License ($14.90)</a></li>
+          <li><a href="https://yujun57.gumroad.com/l/chatcraft-pro-monthly" target="_blank" rel="noopener">Monthly Pro ($2.99/mo)</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Trust &amp; Support</h3>
+        <ul>
+          <li><a href="../privacy/">Privacy Policy (Local Only)</a></li>
+          <li><a href="https://github.com/maxchoi528/chatcraft-studio/issues" target="_blank" rel="noopener">Bug Reports &amp; Feedback</a></li>
+          <li><a href="../de/">Deutsche Version (DACH)</a></li>
+          <li><a href="mailto:cui.yujun0528@gmail.com">cui.yujun0528@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 ChatCraft Studio Pro · Yujun Cui</span>
+      <span>Zero external telemetry · Works offline inside your browser</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
