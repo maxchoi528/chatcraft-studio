@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-type="software">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="page-type" content="software">
+  <meta name="site-kind" content="software">
   <title>Privacy Policy — ChatCraft Studio Pro (100% Local Processing)</title>
   <meta name="description" content="Official Privacy Policy for ChatCraft Studio Pro browser extension. Zero server architecture, zero chat data collection, local-only document compilation.">
   <link rel="canonical" href="https://maxchoi528.github.io/chatcraft-studio/privacy/">
@@ -83,34 +85,59 @@
   </div>
 </header>
 <main>
-  <section class="article-hero">
-    <div class="container">
-      <h1>Privacy Policy — Zero-Server Architecture</h1>
-      <p class="hero-lead">ChatCraft Studio Pro was engineered from day one so your AI prompts, client code, and exported documents never leave your browser.</p>
-      <div class="cta-group">
-        <a class="btn btn-primary" href="https://yujun57.gumroad.com/l/chatcraft-pro-lifetime" target="_blank" rel="noopener">Get Lifetime Pro — $14.90</a>
-        <a class="btn" href="../#install">View Extension Stores</a>
-        <a class="btn" href="../showcase/distributed-system-report.html">Inspect Live Sample</a>
+  <section class="hero" data-enter>
+    <div class="container hero-grid">
+      <div>
+        <h1>Privacy Policy — Zero-Server Architecture.</h1>
+        <p class="hero-lead">ChatCraft Studio Pro was engineered so your AI prompts, proprietary code, and client documents never touch an external server.</p>
+        <div class="cta-group">
+          <a class="btn btn-primary" href="https://yujun57.gumroad.com/l/chatcraft-pro-lifetime" target="_blank" rel="noopener">Get Lifetime Pro — $14.90 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <a class="btn" href="../#install">View Extension Stores</a>
+        </div>
+        <div class="meta-line">
+          <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 100% local in browser RAM</span>
+          <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Zero cloud uploads</span>
+          <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 7 AI platforms supported</span>
+        </div>
       </div>
+      <div class="screenshot-frame"><img src="../assets/studio-pro-1280x800.png" width="1280" height="800" alt="ChatCraft Studio Pro Preview"></div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container prose-block">
-      
+  <section class="section section-paper">
+    <div class="container prose-grid">
+      <article class="prose-block">
+        
         <h2>1. Data Processing &amp; Zero-Cloud Architecture</h2>
-        <p>All conversation extraction, privacy redaction, Markdown formatting, OpenXML Microsoft Word (<code>.docx</code>) compilation, HTML theming, and code <code>.zip</code> packaging run strictly locally inside your browser using bundled scripts.</p>
+        <p>All conversation extraction, privacy redaction, Markdown formatting, OpenXML Microsoft Word (<code>.docx</code>) compilation, HTML theming, and code <code>.zip</code> packaging execute purely inside your browser using bundled local scripts.</p>
         <h2>2. Local Browser Storage</h2>
-        <p>We store only non-sensitive configuration preferences locally via <code>chrome.storage.local</code>: your UI language choice, custom redaction keywords, selected visual theme, and optional Pro activation metadata.</p>
-        <h2>3. Minimal Permissions</h2>
+        <p>We store only non-sensitive configuration preferences locally via <code>chrome.storage.local</code>: UI language choice, custom redaction keywords, selected visual theme, and optional Pro activation status.</p>
+        <h2>3. Minimal Manifest Permissions</h2>
         <ul>
           <li><code>storage</code>: Saves your UI preferences and Pro activation state locally.</li>
           <li><code>activeTab</code>: Reads the current AI tab only when you trigger export or open Studio.</li>
-          <li><code>contextMenus</code>: Lets you send selected text on any page to the formatting Studio.</li>
-          <li><code>api.gumroad.com</code>: Contacted solely if you enter a Pro license key to verify purchase validity via Gumroad's official License Verify endpoint. Zero conversation text is ever included in that request.</li>
+          <li><code>contextMenus</code>: Sends user-highlighted webpage text into the local formatting Studio.</li>
+          <li><code>api.gumroad.com</code>: Contacted solely when you voluntarily submit a Pro License Key to verify purchase validity via Gumroad's official License Verify API. Zero conversation content is ever included in that request.</li>
         </ul>
-        <p>Mirrored official policy: <a href="https://yujun57.gumroad.com/p/privacy-policy-chatcraft-studio-pro" target="_blank" rel="noopener">https://yujun57.gumroad.com/p/privacy-policy-chatcraft-studio-pro</a> · Support contact: <a href="mailto:cui.yujun0528@gmail.com">cui.yujun0528@gmail.com</a>.</p>
-      
+        <p>Mirrored public policy: <a href="https://yujun57.gumroad.com/p/privacy-policy-chatcraft-studio-pro" target="_blank" rel="noopener">https://yujun57.gumroad.com/p/privacy-policy-chatcraft-studio-pro</a> &middot; Support: <a href="mailto:cui.yujun0528@gmail.com">cui.yujun0528@gmail.com</a>.</p>
+        
+      </article>
+
+      <aside class="sidebar-card">
+        <strong style="font-size:17px;display:block;margin-bottom:10px;">Security Guarantees</strong>
+        <p style="font-size:13.5px;color:var(--ink-muted);margin:0 0 16px;">Pay $14.90 once for up to 3 machines or $2.99/mo. Zero account setup.</p>
+        <ul class="feature-list" style="margin-bottom:20px;">
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Zero external analytics or tracking SDKs</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Zero conversation upload servers</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Strict MV3 CSP <code>script-src 'self'</code></li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Local storage used strictly for UI prefs</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Contact: cui.yujun0528@gmail.com</li>
+        </ul>
+        <div style="display:grid;gap:10px;">
+          <a class="btn btn-primary" href="https://yujun57.gumroad.com/l/chatcraft-pro-lifetime" target="_blank" rel="noopener">Get Lifetime Pro — $14.90</a>
+          <a class="btn" href="../showcase/distributed-system-report.html">Inspect Live HTML Sample</a>
+        </div>
+      </aside>
     </div>
   </section>
 </main>
@@ -119,7 +146,7 @@
     <div class="footer-grid">
       <div>
         <h3>ChatCraft Studio Pro</h3>
-        <p>100% local browser extension for Edge, Firefox, and Chrome. Turn AI conversations into publication-grade Word (.docx), PDF, Markdown, and Code ZIP deliverables without cloud uploads.</p>
+        <p>100% local browser extension for Edge, Firefox, and Chrome. Turn AI conversations into native Word (.docx), Vector PDF, Markdown, and Code ZIP deliverables with zero cloud uploads.</p>
       </div>
       <div>
         <h3>Workflows</h3>
@@ -150,8 +177,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 ChatCraft Studio Pro · Yujun Cui</span>
-      <span>Zero external telemetry · Works offline inside your browser</span>
+      <span>&copy; 2026 ChatCraft Studio Pro &middot; Yujun Cui</span>
+      <span>Desktop Chrome, Edge &amp; Firefox &middot; Zero external telemetry</span>
     </div>
   </div>
 </footer>
