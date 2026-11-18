@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-type="software">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="page-type" content="software">
+  <meta name="site-kind" content="software">
   <title>Export ChatGPT, Claude &amp; DeepSeek Tables to Word (.docx) Cleanly | ChatCraft</title>
   <meta name="description" content="Convert ChatGPT, Claude, and DeepSeek conversations into real Microsoft Word (.docx) documents without broken tables, ugly markdown syntax, or cloud uploads.">
   <link rel="canonical" href="https://maxchoi528.github.io/chatcraft-studio/chatgpt-to-word-docx/">
@@ -20,7 +22,7 @@
   <meta name="twitter:image" content="https://maxchoi528.github.io/chatcraft-studio/assets/promo-tile-440x280.png">
   <link rel="icon" type="image/png" href="../assets/icon-128.png">
   <link rel="stylesheet" href="../assets/style.css">
-  
+  <script src="../assets/app.js" defer></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -71,10 +73,10 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Does Microsoft Word open the exported .docx file without warnings?",
+      "name": "Does Microsoft Word open the exported .docx file without repair warnings?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. ChatCraft builds standard OpenXML parts ([Content_Types].xml, word/document.xml, word/styles.xml, _rels/.rels) with valid CRC32 checksums tested against Word, LibreOffice Writer, and Google Docs."
+        "text": "Yes. ChatCraft builds valid OpenXML parts ([Content_Types].xml, word/document.xml, word/styles.xml, _rels/.rels) with CRC32 checksums verified against Word, LibreOffice Writer, and Google Docs."
       }
     },
     {
@@ -82,7 +84,7 @@
       "name": "Can I edit AI messages before downloading the Word file?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Inside the Studio you can check or uncheck specific turns, edit paragraph text inline, and adjust the document title before exporting."
+        "text": "Yes. Inside the Studio you can toggle individual conversation turns, edit text directly inline, and customize the document title before exporting."
       }
     }
   ]
@@ -107,37 +109,90 @@
   </div>
 </header>
 <main>
-  <section class="article-hero">
-    <div class="container">
-      <h1>Export ChatGPT &amp; DeepSeek conversations directly to native Word (.docx).</h1>
-      <p class="hero-lead">Copy-pasting AI tables and bulleted reports into Microsoft Word destroys cell borders and mixes chat banter into your deliverable. ChatCraft compiles genuine OpenXML .docx files directly inside your browser.</p>
-      <div class="cta-group">
-        <a class="btn btn-primary" href="https://yujun57.gumroad.com/l/chatcraft-pro-lifetime" target="_blank" rel="noopener">Get Lifetime Pro — $14.90</a>
-        <a class="btn" href="../#install">View Extension Stores</a>
-        <a class="btn" href="../showcase/distributed-system-report.html">Inspect Live Sample</a>
+  <section class="hero" data-enter>
+    <div class="container hero-grid">
+      <div>
+        <h1>Export ChatGPT &amp; DeepSeek conversations to native Word (.docx).</h1>
+        <p class="hero-lead">Highlight-copying AI responses into Microsoft Word leaves broken cell pipes, dark-mode CSS stains, and repetitive prompts. ChatCraft compiles pure OpenXML .docx documents straight inside browser memory.</p>
+        <div class="cta-group">
+          <a class="btn btn-primary" href="https://yujun57.gumroad.com/l/chatcraft-pro-lifetime" target="_blank" rel="noopener">Get Lifetime Pro — $14.90 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <a class="btn" href="../#install">View Extension Stores</a>
+        </div>
+        <div class="meta-line">
+          <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 100% local in browser RAM</span>
+          <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Zero cloud uploads</span>
+          <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 7 AI platforms supported</span>
+        </div>
       </div>
+      <div class="specimen-card" aria-label="Interactive deliverable comparison preview">
+  <div class="specimen-bar">
+    <div class="tab-group" role="tablist">
+      <button class="tab-btn" type="button" role="tab" aria-selected="true" data-specimen-mode="clean">Word OpenXML Table</button>
+      <button class="tab-btn" type="button" role="tab" aria-selected="false" data-specimen-mode="raw">Clipboard Paste Bug</button>
+    </div>
+    <a href="../showcase/distributed-system-report.html" style="font-size:12.5px;font-weight:600;text-decoration:none;">Full Sample &rarr;</a>
+  </div>
+  <div class="specimen-body" id="specimen-output">
+    <div id="specimen-clean"><strong>Executive Word (.docx) Deliverable</strong><br>
+          <span style="font-size:12px;opacity:0.8;">Native <code>w:tbl</code> borders &middot; Clean Headings &middot; Prompts Removed</span>
+          <table>
+            <thead><tr><th>Database</th><th>p99 Latency</th><th>Compression</th><th>Cost / mo</th></tr></thead>
+            <tbody>
+              <tr><td>PostgreSQL 17</td><td>4,150 ms</td><td>1.9x</td><td>$420</td></tr>
+              <tr><td>ClickHouse 25</td><td>54 ms</td><td>9.6x (ZSTD)</td><td>$290</td></tr>
+              <tr><td>DuckDB 1.2</td><td>98 ms</td><td>6.5x</td><td>$0</td></tr>
+            </tbody>
+          </table></div>
+    <div id="specimen-raw" hidden>| Database | p99 | Compression | Cost |
+| :--- | :--- | :--- | :--- |
+| PostgreSQL 17 | 4,150 ms | 1.9x | $420 |
+^ Word pastes Markdown pipes as plain literal characters instead of real editable table cells.</div>
+  </div>
+  <div class="specimen-foot">
+    <span>Built in browser memory &middot; Zero cloud upload</span>
+    <span>7 AI platforms supported</span>
+  </div>
+</div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container prose-block">
-      
+  <section class="section section-paper">
+    <div class="container prose-grid">
+      <article class="prose-block">
+        
         <h2>Why standard browser copy-paste breaks in Microsoft Word</h2>
-        <p>When you highlight a ChatGPT or DeepSeek response and paste into Word, clipboard HTML brings dark-mode background CSS, raw Markdown pipe symbols (<code>| col |</code>), and repetitive prompt blocks. You end up spending 15 minutes manually deleting lines and re-formatting tables.</p>
+        <p>When you highlight a ChatGPT, Claude, or DeepSeek response and press Ctrl+C, clipboard HTML pulls dark background rectangles, literal pipe characters (<code>| col |</code>), and all of your conversational questions mixed in between sections.</p>
         <h2>How ChatCraft's in-browser OpenXML compiler fixes it</h2>
         <ul>
-          <li><strong>Native Word Tables &amp; Headings:</strong> Converts Markdown tables into real Word <code>w:tbl</code> elements with styled dark headers and bordered cells.</li>
-          <li><strong>Executive Report Mode (Hide Prompts):</strong> Removes every user prompt block so only polished AI sections merge into a deliverable report with an optional Table of Contents.</li>
-          <li><strong>100% Local Processing:</strong> Unlike online converter websites that ingest your confidential chat links, ChatCraft builds the entire ZIP/OpenXML <code>.docx</code> archive inside local memory.</li>
+          <li><strong>Native Word Tables &amp; Headings:</strong> Compiles real OpenXML <code>w:tbl</code> structures with dark header shading, borders, and tabular numbers.</li>
+          <li><strong>Executive Report Mode (Hide Prompts):</strong> Automatically strips every user prompt block so only polished AI sections merge into a deliverable report.</li>
+          <li><strong>100% Offline Construction:</strong> Unlike sketchy online <code>.docx</code> converter websites that ask you to paste confidential share links, ChatCraft builds every XML file locally in browser memory.</li>
         </ul>
         <div class="callout-box">
-          <strong>Verify the output quality:</strong> Open our <a href="../showcase/distributed-system-report.html">Live Sample Report</a> to inspect how multi-column benchmark tables, reasoning notes, and redacted tokens render cleanly.
+          <strong>Inspect real generated output:</strong> Open our <a href="../showcase/distributed-system-report.html">Live Sample Report</a> to inspect how multi-column benchmark tables, reasoning notes, and redacted credentials render.
         </div>
-      <h2>Quick Answers</h2>
-      <div class="faq-list">
-        <details open><summary>Does Microsoft Word open the exported .docx file without warnings?</summary><p>Yes. ChatCraft builds standard OpenXML parts ([Content_Types].xml, word/document.xml, word/styles.xml, _rels/.rels) with valid CRC32 checksums tested against Word, LibreOffice Writer, and Google Docs.</p></details>
-        <details open><summary>Can I edit AI messages before downloading the Word file?</summary><p>Yes. Inside the Studio you can check or uncheck specific turns, edit paragraph text inline, and adjust the document title before exporting.</p></details>
-      </div>
+        <h2>Quick Technical Answers</h2>
+        <div class="faq-list">
+          <details open><summary>Does Microsoft Word open the exported .docx file without repair warnings?</summary><p>Yes. ChatCraft builds valid OpenXML parts ([Content_Types].xml, word/document.xml, word/styles.xml, _rels/.rels) with CRC32 checksums verified against Word, LibreOffice Writer, and Google Docs.</p></details>
+          <details open><summary>Can I edit AI messages before downloading the Word file?</summary><p>Yes. Inside the Studio you can toggle individual conversation turns, edit text directly inline, and customize the document title before exporting.</p></details>
+        </div>
+      </article>
+
+      <aside class="sidebar-card">
+        <strong style="font-size:17px;display:block;margin-bottom:10px;">Word (.docx) Capabilities</strong>
+        <p style="font-size:13.5px;color:var(--ink-muted);margin:0 0 16px;">Pay $14.90 once for up to 3 machines or $2.99/mo. Zero account setup.</p>
+        <ul class="feature-list" style="margin-bottom:20px;">
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Genuine OpenXML <code>w:tbl</code> styled tables</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Executive Report Mode hides user prompts</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Optional clickable Table of Contents</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 100% browser memory ZIP packaging</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Opens cleanly in Word, LibreOffice &amp; Google Docs</li>
+        </ul>
+        <div style="display:grid;gap:10px;">
+          <a class="btn btn-primary" href="https://yujun57.gumroad.com/l/chatcraft-pro-lifetime" target="_blank" rel="noopener">Get Lifetime Pro — $14.90</a>
+          <a class="btn" href="../showcase/distributed-system-report.html">Inspect Live HTML Sample</a>
+        </div>
+      </aside>
     </div>
   </section>
 </main>
@@ -146,7 +201,7 @@
     <div class="footer-grid">
       <div>
         <h3>ChatCraft Studio Pro</h3>
-        <p>100% local browser extension for Edge, Firefox, and Chrome. Turn AI conversations into publication-grade Word (.docx), PDF, Markdown, and Code ZIP deliverables without cloud uploads.</p>
+        <p>100% local browser extension for Edge, Firefox, and Chrome. Turn AI conversations into native Word (.docx), Vector PDF, Markdown, and Code ZIP deliverables with zero cloud uploads.</p>
       </div>
       <div>
         <h3>Workflows</h3>
@@ -177,8 +232,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 ChatCraft Studio Pro · Yujun Cui</span>
-      <span>Zero external telemetry · Works offline inside your browser</span>
+      <span>&copy; 2026 ChatCraft Studio Pro &middot; Yujun Cui</span>
+      <span>Desktop Chrome, Edge &amp; Firefox &middot; Zero external telemetry</span>
     </div>
   </div>
 </footer>
