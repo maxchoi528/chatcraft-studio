@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de" data-type="software">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="page-type" content="software">
+  <meta name="site-kind" content="software">
   <title>ChatGPT, Claude &amp; DeepSeek als Word (.docx) &amp; PDF exportieren — 100 % lokal (DSGVO)</title>
   <meta name="description" content="KI-Chats aus ChatGPT, Claude, Gemini &amp; DeepSeek lokal im Browser als Microsoft Word (.docx), PDF &amp; Markdown exportieren — inkl. DSGVO-Schwärzung von API-Keys &amp; Kundennamen.">
   <link rel="canonical" href="https://maxchoi528.github.io/chatcraft-studio/de/">
@@ -20,7 +22,7 @@
   <meta name="twitter:image" content="https://maxchoi528.github.io/chatcraft-studio/assets/promo-tile-440x280.png">
   <link rel="icon" type="image/png" href="../assets/icon-128.png">
   <link rel="stylesheet" href="../assets/style.css">
-  
+  <script src="../assets/app.js" defer></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -71,10 +73,10 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Werden meine Chatverläufe an einen Server gesendet?",
+      "name": "Werden meine Chatverläufe jemals an einen Server übertragen?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nein. Alle Dokumente (.docx, PDF, Markdown, HTML, Code-.zip) werden ausschließlich lokal im Arbeitsspeicher Ihres Browsers erzeugt."
+        "text": "Nein. Alle Dokumente (.docx, PDF, Markdown, HTML, Code-.zip) entstehen ausschließlich lokal im Speicher Ihres Desktop-Browsers."
       }
     },
     {
@@ -82,7 +84,7 @@
       "name": "Welche Browser werden unterstützt?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Firefox (im Review bei Mozilla Add-ons), Microsoft Edge (im Review) sowie Chrome und Chromium-Browser."
+        "text": "Mozilla Firefox (im Review bei AMO), Microsoft Edge (im Review) sowie Chrome und Chromium-Browser auf Windows, macOS und Linux. Mobilbrowser werden nicht unterstützt."
       }
     }
   ]
@@ -99,7 +101,7 @@
     <nav class="nav-links" aria-label="Main navigation">
       <a href="../chatgpt-to-word-docx/" >Word (.docx)</a>
       <a href="../deepseek-claude-to-pdf/" >PDF &amp; Markdown</a>
-      <a href="../gdpr-ai-chat-redactor/" >DSGVO-Schwärzung</a>
+      <a href="../gdpr-ai-chat-redactor/" >DSGVO-Schutz</a>
       <a href="../showcase/distributed-system-report.html">Live-Beispiel</a>
       <a href="../index.html" aria-current="page">English</a>
       <a class="btn btn-primary btn-sm" href="https://yujun57.gumroad.com/l/chatcraft-pro-lifetime" target="_blank" rel="noopener">Pro holen ($14.90)</a>
@@ -107,33 +109,86 @@
   </div>
 </header>
 <main>
-  <section class="article-hero">
-    <div class="container">
-      <h1>KI-Gespräche als Word (.docx), PDF &amp; Markdown exportieren — 100 % lokal &amp; DSGVO-konform.</h1>
-      <p class="hero-lead">Schluss mit zerschossenen Tabellen beim Kopieren aus ChatGPT, Claude oder DeepSeek. Erstellen Sie kundenfertige Word-Dokumente, Berichte ohne eigene Prompts und geschwärzte PDFs direkt im Browser.</p>
-      <div class="cta-group">
-        <a class="btn btn-primary" href="https://yujun57.gumroad.com/l/chatcraft-pro-lifetime" target="_blank" rel="noopener">Pro-Lizenz sichern ($14.90)</a>
-        <a class="btn" href="../#install">Browser-Erweiterung ansehen</a>
-        <a class="btn" href="../showcase/distributed-system-report.html">Live-Beispiel öffnen</a>
+  <section class="hero" data-enter>
+    <div class="container hero-grid">
+      <div>
+        <h1>KI-Gespräche als Word (.docx), PDF &amp; Markdown exportieren — 100 % lokal &amp; DSGVO.</h1>
+        <p class="hero-lead">Schluss mit kaputten Tabellen beim Kopieren aus ChatGPT, Claude oder DeepSeek. Erstellen Sie saubere Word-Dokumente, Kundenberichte ohne eigene Rückfragen und geschwärzte PDFs direkt im Browser.</p>
+        <div class="cta-group">
+          <a class="btn btn-primary" href="https://yujun57.gumroad.com/l/chatcraft-pro-lifetime" target="_blank" rel="noopener">Lifetime Pro holen — $14.90 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <a class="btn" href="../#install">Browser-Stores ansehen</a>
+        </div>
+        <div class="meta-line">
+          <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 100 % lokal im Browser</span>
+          <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Keine Server-Übertragung</span>
+          <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> ChatGPT, Claude, DeepSeek, Gemini</span>
+        </div>
       </div>
+      <div class="specimen-card" aria-label="Interactive deliverable comparison preview">
+  <div class="specimen-bar">
+    <div class="tab-group" role="tablist">
+      <button class="tab-btn" type="button" role="tab" aria-selected="true" data-specimen-mode="clean">Word / DSGVO-Export</button>
+      <button class="tab-btn" type="button" role="tab" aria-selected="false" data-specimen-mode="raw">Roher Zwischenablage-Copy</button>
+    </div>
+    <a href="../showcase/distributed-system-report.html" style="font-size:12.5px;font-weight:600;text-decoration:none;">Full Sample &rarr;</a>
+  </div>
+  <div class="specimen-body" id="specimen-output">
+    <div id="specimen-clean"><strong>DSGVO-konformer Kundenbericht (.docx / PDF)</strong><br>
+          <span style="font-size:12px;opacity:0.8;">Executive Modus (Prompts ausgeblendet) &middot; <span class="redact-pill">[REDACTED]</span></span>
+          <table>
+            <thead><tr><th>Datenbank</th><th>Einsatzbereich</th><th>Latenz (p99)</th><th>Kosten</th></tr></thead>
+            <tbody>
+              <tr><td>PostgreSQL 17</td><td>ACID-Buchhaltung</td><td>4.150 ms</td><td>$420 / Mon.</td></tr>
+              <tr><td>ClickHouse 25</td><td>Telemetrie-OLAP</td><td>54 ms</td><td>$290 / Mon.</td></tr>
+            </tbody>
+          </table></div>
+    <div id="specimen-raw" hidden>Benutzer: Hier ist API-Key sk-proj-abc123def456 für NordicCloud GmbH.
+| Datenbank | Latenz |
+|---|---|
+| PostgreSQL 17 | 4.150 ms |
+^ Kopieren in Word zerstört Tabellen und lässt vertrauliche Kundendaten stehen.</div>
+  </div>
+  <div class="specimen-foot">
+    <span>Built in browser memory &middot; Zero cloud upload</span>
+    <span>7 AI platforms supported</span>
+  </div>
+</div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container prose-block">
-      
-        <h2>Für Beratung, Entwicklung &amp; Datenschutz im DACH-Raum entwickelt</h2>
+  <section class="section section-paper">
+    <div class="container prose-grid">
+      <article class="prose-block">
+        
+        <h2>Für Beratung, Entwicklung &amp; Datenschutz im DACH-Raum</h2>
         <ul>
-          <li><strong>Echter Word-Export (.docx) direkt im Browser:</strong> Tabellen, Überschriften und Code-Blöcke werden lokal als OpenXML-Datei erzeugt — ganz ohne Upload auf fremde Webseiten.</li>
-          <li><strong>Executive-Berichtsmodus:</strong> Eigene Rückfragen auf Knopfdruck ausblenden, KI-Antworten sauber zusammenführen und optional ein Inhaltsverzeichnis voranstellen.</li>
-          <li><strong>Automatische DSGVO-Schwärzung:</strong> Maskiert API-Schlüssel (<code>sk-...</code>), E-Mail-Adressen, Telefonnummern, IP-Adressen sowie eigene Firmennamen (z. B. <code>NordicCloud GmbH</code>) vor dem Export.</li>
-          <li><strong>7 KI-Plattformen + 24 Designs:</strong> Funktioniert mit ChatGPT, Claude, Gemini, DeepSeek, Grok, Perplexity und Microsoft Copilot.</li>
+          <li><strong>Echter Word-Export (.docx) direkt im Arbeitsspeicher:</strong> Tabellen, Überschriften und Code-Blöcke werden lokal als OpenXML-Datei kompiliert — ohne Upload auf fremde Web-Konverter.</li>
+          <li><strong>Executive-Berichtsmodus:</strong> Eigene Rückfragen auf Knopfdruck ausblenden, KI-Antworten bündeln und optional ein Inhaltsverzeichnis generieren.</li>
+          <li><strong>Automatische DSGVO-Schwärzung:</strong> Maskiert API-Schlüssel (<code>sk-...</code>), E-Mail-Adressen, Telefonnummern (auch deutsche Rufnummern), IP-Adressen sowie eigene Firmennamen vor dem Export.</li>
+          <li><strong>8 Sprachen inklusive Deutsch:</strong> Sowohl die Erweiterungsoberfläche als auch die Store-Einträge stehen komplett auf Deutsch bereit.</li>
         </ul>
-      <h2>Häufige Fragen</h2>
-      <div class="faq-list">
-        <details open><summary>Werden meine Chatverläufe an einen Server gesendet?</summary><p>Nein. Alle Dokumente (.docx, PDF, Markdown, HTML, Code-.zip) werden ausschließlich lokal im Arbeitsspeicher Ihres Browsers erzeugt.</p></details>
-        <details open><summary>Welche Browser werden unterstützt?</summary><p>Firefox (im Review bei Mozilla Add-ons), Microsoft Edge (im Review) sowie Chrome und Chromium-Browser.</p></details>
-      </div>
+        <h2>Häufige Fragen</h2>
+        <div class="faq-list">
+          <details open><summary>Werden meine Chatverläufe jemals an einen Server übertragen?</summary><p>Nein. Alle Dokumente (.docx, PDF, Markdown, HTML, Code-.zip) entstehen ausschließlich lokal im Speicher Ihres Desktop-Browsers.</p></details>
+          <details open><summary>Welche Browser werden unterstützt?</summary><p>Mozilla Firefox (im Review bei AMO), Microsoft Edge (im Review) sowie Chrome und Chromium-Browser auf Windows, macOS und Linux. Mobilbrowser werden nicht unterstützt.</p></details>
+        </div>
+      </article>
+
+      <aside class="sidebar-card">
+        <strong style="font-size:17px;display:block;margin-bottom:10px;">Funktionen im Überblick</strong>
+        <p style="font-size:13.5px;color:var(--ink-muted);margin:0 0 16px;">Einmal zahlen ($14.90) oder flexibel monatlich ($2.99). Funktioniert offline.</p>
+        <ul class="feature-list" style="margin-bottom:20px;">
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Echtes OpenXML Word (<code>.docx</code>) ohne Cloud-Upload</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Executive-Modus blendet eigene Prompts aus</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Automatische DSGVO-Schwärzung (Keys, E-Mail, Kundennamen)</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 24 helle &amp; dunkle Themes + Querformat-PDF</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Unterstützt ChatGPT, Claude, Gemini, DeepSeek &amp; mehr</li>
+        </ul>
+        <div style="display:grid;gap:10px;">
+          <a class="btn btn-primary" href="https://yujun57.gumroad.com/l/chatcraft-pro-lifetime" target="_blank" rel="noopener">Lifetime Pro — $14.90</a>
+          <a class="btn" href="../showcase/distributed-system-report.html">Live HTML-Beispiel ansehen</a>
+        </div>
+      </aside>
     </div>
   </section>
 </main>
@@ -142,7 +197,7 @@
     <div class="footer-grid">
       <div>
         <h3>ChatCraft Studio Pro</h3>
-        <p>100 % lokale Browser-Erweiterung für Chrome, Edge und Firefox. KI-Gespräche ohne Cloud-Upload in Word (.docx), PDF, Markdown und Code-ZIPs umwandeln.</p>
+        <p>100 % lokale Browser-Erweiterung für Edge, Firefox und Chrome. KI-Chats ohne Cloud-Upload in Word (.docx), PDF, Markdown und Code-ZIPs exportieren.</p>
       </div>
       <div>
         <h3>Anwendungsfälle</h3>
@@ -163,7 +218,7 @@
         </ul>
       </div>
       <div>
-        <h3>Rechtliches &amp; Kontakt</h3>
+        <h3>Vertrauen &amp; Support</h3>
         <ul>
           <li><a href="../privacy/">Privacy Policy (Local Only)</a></li>
           <li><a href="https://github.com/maxchoi528/chatcraft-studio/issues" target="_blank" rel="noopener">Bug Reports &amp; Feedback</a></li>
@@ -173,8 +228,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 ChatCraft Studio Pro · Yujun Cui</span>
-      <span>Zero external telemetry · Works offline inside your browser</span>
+      <span>&copy; 2026 ChatCraft Studio Pro &middot; Yujun Cui</span>
+      <span>Desktop Chrome, Edge &amp; Firefox &middot; Zero external telemetry</span>
     </div>
   </div>
 </footer>
