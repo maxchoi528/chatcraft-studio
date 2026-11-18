@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-type="software">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="page-type" content="software">
+  <meta name="site-kind" content="software">
   <title>ChatCraft Studio Pro — Export AI Chats to Word (.docx), PDF &amp; Markdown Locally</title>
   <meta name="description" content="Turn ChatGPT, Claude, Gemini &amp; DeepSeek conversations into client-ready Microsoft Word (.docx), vector PDF, Markdown, and redacted reports 100% locally in your browser.">
   <link rel="canonical" href="https://maxchoi528.github.io/chatcraft-studio/">
@@ -87,10 +89,10 @@
     },
     {
       "@type": "Question",
-      "name": "What happens if an AI website updates its DOM structure?",
+      "name": "Does ChatCraft work on mobile browsers?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "ChatCraft uses a three-layer architecture: provider selectors, semantic heuristic extraction, and a built-in right-click Selection Importer and Markdown paste parser inside the Studio."
+        "text": "Currently ChatCraft Studio Pro is engineered exclusively for desktop browsers (Microsoft Edge, Mozilla Firefox, and Chromium browsers) and does not run inside mobile iOS/Android browsers."
       }
     },
     {
@@ -124,65 +126,65 @@
 </header>
 
 <main>
-  <section class="hero">
+  <section class="hero" data-enter>
     <div class="container hero-grid">
       <div>
-        <h1>Export AI conversations into client-ready Word, PDF &amp; Markdown locally.</h1>
-        <p class="hero-lead">Stop losing tables, math equations, and code structure when copy-pasting from ChatGPT, Claude, Gemini, or DeepSeek. Generate native Microsoft Word (<code>.docx</code>), vector PDF, and GDPR-redacted deliverables directly inside browser memory with zero cloud uploads.</p>
+        <h1>Export AI chats to client-ready Word, PDF &amp; Markdown locally.</h1>
+        <p class="hero-lead">Stop manually deleting prompt chatter and fixing broken Markdown pipe tables after every session. ChatCraft Studio compiles native Microsoft Word (<code>.docx</code>), vector PDF, and GDPR-redacted deliverables purely in desktop browser memory.</p>
         <div class="cta-group">
           <a class="btn btn-primary" href="#install">Install Browser Extension <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-          <a class="btn" href="https://yujun57.gumroad.com/l/chatcraft-pro-lifetime" target="_blank" rel="noopener">Get Lifetime Pro — $14.90</a>
-          <a class="btn" href="./showcase/distributed-system-report.html">Inspect Live Sample</a>
+          <a class="btn" href="https://yujun57.gumroad.com/l/chatcraft-pro-lifetime" target="_blank" rel="noopener">Get Lifetime Pro &mdash; $14.90</a>
         </div>
         <div class="meta-line">
-          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Zero external servers</span>
-          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Native OpenXML .docx</span>
-          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 8 UI languages</span>
-          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Free edition included</span>
+          <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Zero cloud uploads</span>
+          <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Native OpenXML .docx</span>
+          <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 8 UI languages</span>
+          <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 24 themes included</span>
         </div>
       </div>
+      <div class="specimen-card" aria-label="Interactive deliverable comparison preview">
+  <div class="specimen-bar">
+    <div class="tab-group" role="tablist">
+      <button class="tab-btn" type="button" role="tab" aria-selected="true" data-specimen-mode="clean">Clean Word</button>
+      <button class="tab-btn" type="button" role="tab" aria-selected="false" data-specimen-mode="nord">Nord Dark</button>
+      <button class="tab-btn" type="button" role="tab" aria-selected="false" data-specimen-mode="raw">Raw Copy</button>
+    </div>
+    <a href="./showcase/distributed-system-report.html" style="font-size:12.5px;font-weight:600;text-decoration:none;">Full Sample &rarr;</a>
+  </div>
+  <div class="specimen-body" id="specimen-output">
+    <div id="specimen-clean"><strong>Distributed System Architecture &amp; Financial Model</strong><br>
+      <span style="font-size:12px;opacity:0.8;">Executive Report Mode (Prompts Stripped) &middot; <span class="redact-pill">[REDACTED_API_KEY]</span> &middot; <span class="redact-pill">[REDACTED_EMAIL]</span></span>
+      <table>
+        <thead>
+          <tr><th>Engine</th><th>Workload</th><th>p99 Latency</th><th>Infra Cost</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>PostgreSQL 17</td><td>ACID Ledger</td><td>4,150 ms</td><td>$420 / mo</td></tr>
+          <tr><td>ClickHouse 25</td><td>Telemetry OLAP</td><td>54 ms</td><td>$290 / mo</td></tr>
+          <tr><td>DuckDB 1.2</td><td>Local Parquet</td><td>98 ms</td><td>$0 (CPU)</td></tr>
+        </tbody>
+      </table>
+      <div style="font-size:12px;opacity:0.82;">Compiles directly into OpenXML <code>.docx</code> tables, vector PDF, or clean Obsidian Markdown.</div></div>
+    <div id="specimen-raw" hidden>User Prompt: Here is our staging key sk-proj-abc123def456 and devops@nordiccloud.de. Compare DBs.
 
-      <div class="specimen-card" aria-label="Interactive comparison between raw copy-paste and ChatCraft export">
-        <div class="specimen-bar">
-          <div class="tab-group" role="tablist">
-            <button class="tab-btn" type="button" role="tab" aria-selected="true" data-specimen-mode="clean">ChatCraft Pro Output</button>
-            <button class="tab-btn" type="button" role="tab" aria-selected="false" data-specimen-mode="raw">Raw Copy-Paste</button>
-          </div>
-          <div class="theme-dots" id="specimen-themes">
-            <button class="theme-chip" type="button" aria-pressed="true" data-specimen-theme="light">Light Paper</button>
-            <button class="theme-chip" type="button" aria-pressed="false" data-specimen-theme="nord">Nord Dark</button>
-          </div>
-        </div>
-        <div class="specimen-body" id="specimen-output">
-          <div id="specimen-clean">
-            <strong>Distributed System Architecture &amp; Financial Model</strong><br>
-            <span style="font-size:12px;opacity:0.78;">Executive Report Mode (Prompts Hidden) · <span class="redact-pill">[REDACTED_API_KEY]</span> · <span class="redact-pill">[REDACTED_EMAIL]</span></span>
-            <table>
-              <thead>
-                <tr><th>Engine</th><th>Workload</th><th>p99 Latency</th><th>Monthly Cost</th></tr>
-              </thead>
-              <tbody>
-                <tr><td>PostgreSQL 17</td><td>ACID Ledger</td><td>4,150 ms</td><td>$420 / mo</td></tr>
-                <tr><td>ClickHouse 25</td><td>Telemetry OLAP</td><td>54 ms</td><td>$290 / mo</td></tr>
-                <tr><td>DuckDB 1.2</td><td>Local Parquet</td><td>98 ms</td><td>$0 (Local)</td></tr>
-              </tbody>
-            </table>
-            <div style="font-size:12px;opacity:0.85;">Ready for Microsoft Word (<code>.docx</code>), print-ready A4 PDF, or Obsidian Markdown.</div>
-          </div>
-          <div id="specimen-raw" hidden>User: Here is my key sk-proj-abc123def456 and devops@nordiccloud.de. Make a benchmark table.
-ChatGPT: Sure! Here is a comparison:
-| Engine | Workload | p99 | Cost |
+ChatGPT: Sure! Here is a breakdown for you:
+| Engine | Workload | p99 Latency | Cost |
 |---|---|---|---|
-| PostgreSQL 17 | ACID | 4,150 ms | $420 |
-^ Pasting Markdown pipes into Word breaks cell borders, exposes secrets, and leaves "Sure! Here is..." chat clutter everywhere.</div>
-        </div>
-      </div>
+| PostgreSQL 17 | ACID Ledger | 4,150 ms | $420 / mo |
+
+^ Pasting raw Markdown pipes into Word breaks cell borders, exposes secrets, and leaves &quot;Sure! Here is...&quot; chatter.</div>
+  </div>
+  <div class="specimen-foot">
+    <span>Built in browser memory &middot; Zero cloud upload</span>
+    <span>7 AI platforms supported</span>
+  </div>
+</div>
     </div>
   </section>
 
   <section class="platforms-bar" aria-label="Supported AI platforms">
     <div class="container platforms-flex">
-      <div class="platforms-label">Supported Platforms + Universal Selection Importer:</div>
+      <div class="platforms-label">Works natively across 7 AI workspaces + any webpage selection:</div>
       <div class="platform-tags">
         <span class="platform-pill">ChatGPT</span>
         <span class="platform-pill">Claude</span>
@@ -195,57 +197,106 @@ ChatGPT: Sure! Here is a comparison:
     </div>
   </section>
 
-  <section class="section">
+  <section class="section section-paper">
     <div class="container">
-      <h2>Built for real client deliverables, not screenshots of a chat window</h2>
-      <p class="section-lead">Preview, edit turns inline, hide your prompts, scrub confidential credentials, and pick from 24 curated light and dark editorial themes before hitting export.</p>
+      <h2>Deliverable engineering built around your actual workflow</h2>
+      <p class="section-lead">Edit conversation turns inline, strip out your prompts into an Executive Report with an automatic Table of Contents, and scrub sensitive credentials before saving.</p>
 
       <div class="split-feature">
         <div class="feature-copy">
-          <h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M8 13l1.5 5 2-4 2 4L15 13"/></svg> Native Microsoft Word (.docx) &amp; Vector PDF</h3>
-          <p>ChatCraft compiles OpenXML Word documents cleanly inside browser memory — tables keep crisp headers, code blocks stay legible, and multi-column benchmarks scale into portrait or landscape PDF layouts.</p>
+          <h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M8 13l1.5 5 2-4 2 4L15 13"/></svg> Native Microsoft Word (.docx) &amp; Landscape PDF</h3>
+          <p>ChatCraft packages OpenXML parts (<code>[Content_Types].xml</code>, styled <code>w:tbl</code> matrices, headings, and monospace code fences) with valid CRC32 archives right inside the browser.</p>
           <ul class="feature-list">
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Automatic Table of Contents &amp; Executive Report Mode (hides all user prompts)</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Landscape PDF toggle for wide multi-column financial or benchmark tables</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> One-click bundle downloads of every code fence into a clean <code>.zip</code> archive</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Executive Report Mode strips every user prompt so only polished AI sections merge</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Landscape A4 PDF toggle keeps wide 5-column financial benchmarks legible</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Bundle every generated code block from a thread into one structured <code>.zip</code></li>
           </ul>
         </div>
         <div class="screenshot-frame">
-          <img src="./assets/studio-free-1280x800.png" width="1280" height="800" alt="ChatCraft Studio visual layout editor showing theme grid, message selection, and live benchmark table preview" loading="lazy">
-          <div class="screenshot-caption">Visual Deliverable Studio — inline turn editing, content filters, and 24-theme preview inside the browser.</div>
+          <img src="./assets/studio-free-1280x800.png" width="1280" height="800" alt="ChatCraft Studio visual layout editor showing theme selector, inline turn editor, and formatted table preview" loading="lazy">
         </div>
       </div>
 
       <div class="split-feature reverse">
         <div class="screenshot-frame">
-          <img src="./assets/studio-pro-1280x800.png" width="1280" height="800" alt="ChatCraft Pro Executive Report Mode hiding user prompts and redacting sensitive NordicCloud GmbH credentials" loading="lazy">
-          <div class="screenshot-caption">Executive Report Mode + GDPR Auto-Redaction scrubbing client entities before delivery.</div>
+          <img src="./assets/studio-pro-1280x800.png" width="1280" height="800" alt="ChatCraft Pro Executive Report Mode hiding user prompts and automatically redacting sensitive client entities" loading="lazy">
         </div>
         <div class="feature-copy">
-          <h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> GDPR Privacy Redaction &amp; Zero-Server Security</h3>
-          <p>Consultants, engineers, and lawyers routinely paste client names, staging IPs, and API tokens into LLMs. ChatCraft strips secrets locally on export with zero network traffic.</p>
+          <h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> GDPR Secret Auto-Redaction &amp; Zero Servers</h3>
+          <p>Consultants and engineers routinely share client architecture plans or SQL schemas generated alongside real tokens and internal emails. Redaction executes locally before export.</p>
           <ul class="feature-list">
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Auto-masks OpenAI/GitHub/JWT keys, emails, phone numbers, IPs, and cards</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Custom redaction keyword list (e.g., <code>NordicCloud GmbH, Project Atlas</code>)</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Cross-AI Context Bundle (CtxPort v2) transfers long threads from ChatGPT into Claude</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Auto-masks OpenAI/GitHub/JWT keys, emails, EU/US/CN phones, IPs, and cards</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Custom redaction keyword list (such as <code>NordicCloud GmbH, Project Atlas</code>)</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Cross-AI Context Bundle (CtxPort v2) continues long threads cleanly in another AI</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section section-alt">
+  <section class="section section-dark">
+    <div class="container theme-studio-grid">
+      <div>
+        <h2>Test 24 Light &amp; Dark Themes Live</h2>
+        <p class="section-lead">Every exported HTML and PDF deliverable ships self-contained styling inspired by editorial paper systems and developer color palettes. Click a theme swatch to preview live contrast and code styling.</p>
+        <div class="theme-selector-grid" role="group" aria-label="Interactive document theme sampler">
+          <button class="theme-chip" type="button" data-theme-pick="nord" aria-pressed="true">
+            <span>Nord</span>
+            <span class="swatch-row"><span class="swatch-dot" style="background:#2e3440"></span><span class="swatch-dot" style="background:#88c0d0"></span><span class="swatch-dot" style="background:#eceff4"></span></span>
+          </button>
+          <button class="theme-chip" type="button" data-theme-pick="modern" aria-pressed="false">
+            <span>Default (Modern)</span>
+            <span class="swatch-row"><span class="swatch-dot" style="background:#ffffff"></span><span class="swatch-dot" style="background:#1d4ed8"></span><span class="swatch-dot" style="background:#0f172a"></span></span>
+          </button>
+          <button class="theme-chip" type="button" data-theme-pick="flexoki" aria-pressed="false">
+            <span>Flexoki Paper</span>
+            <span class="swatch-row"><span class="swatch-dot" style="background:#fffcf0"></span><span class="swatch-dot" style="background:#205ea6"></span><span class="swatch-dot" style="background:#100f0f"></span></span>
+          </button>
+          <button class="theme-chip" type="button" data-theme-pick="catppuccin" aria-pressed="false">
+            <span>Catppuccin</span>
+            <span class="swatch-row"><span class="swatch-dot" style="background:#1e1e2e"></span><span class="swatch-dot" style="background:#89b4fa"></span><span class="swatch-dot" style="background:#cdd6f4"></span></span>
+          </button>
+          <button class="theme-chip" type="button" data-theme-pick="gruvbox" aria-pressed="false">
+            <span>Gruvbox</span>
+            <span class="swatch-row"><span class="swatch-dot" style="background:#282828"></span><span class="swatch-dot" style="background:#fabd2f"></span><span class="swatch-dot" style="background:#ebdbb2"></span></span>
+          </button>
+          <button class="theme-chip" type="button" data-theme-pick="everforest" aria-pressed="false">
+            <span>Everforest</span>
+            <span class="swatch-row"><span class="swatch-dot" style="background:#2d353b"></span><span class="swatch-dot" style="background:#a7c080"></span><span class="swatch-dot" style="background:#d3c6aa"></span></span>
+          </button>
+        </div>
+        <div style="margin-top:22px;">
+          <a class="btn" href="./showcase/distributed-system-report.html">Inspect Full Generated HTML Report &rarr;</a>
+        </div>
+      </div>
+
+      <div class="sample-doc" id="live-theme-doc">
+        <div class="sample-doc-head">
+          <strong id="live-theme-title">Nord</strong>
+          <span id="live-theme-badge" style="font-size:12px;font-weight:700;">Pro Theme</span>
+        </div>
+        <div style="font-size:15px;font-weight:700;margin-bottom:8px;">2. Zero-Allocation Telemetry Batch Worker</div>
+        <p style="margin:0;font-size:13.5px;opacity:0.9;">Sensitive values (<code>sk-...</code> and client names) are sanitized before syntax highlighting and ZIP bundling.</p>
+        <pre id="live-theme-code"><code>async def process_telemetry(batch: TelemetryBatch) -> dict:
+    # Tenant [REDACTED] processed cleanly offline
+    await asyncio.sleep(0.005)
+    return {"tenant": batch.tenant, "count": len(batch.events)}</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-archival">
     <div class="container">
-      <h2>Export Formats &amp; Extraction Modes Compared</h2>
-      <p class="section-lead">Four specialized extraction engines combined with four client-ready output formats.</p>
+      <h2>Export Formats &amp; Extraction Engines</h2>
+      <p class="section-lead">Four specialized extraction modes combined with four clean document output pipelines.</p>
       <div class="table-wrap">
         <table class="matrix-table">
           <thead>
             <tr>
               <th>Deliverable Output</th>
               <th>Primary Audience</th>
-              <th>Tables &amp; Code Styling</th>
-              <th>Redaction &amp; Report Mode</th>
+              <th>Structure &amp; Formatting</th>
+              <th>Privacy &amp; Report Mode</th>
               <th>Tier</th>
             </tr>
           </thead>
@@ -253,42 +304,42 @@ ChatGPT: Sure! Here is a comparison:
             <tr>
               <td><strong>Microsoft Word (.docx)</strong></td>
               <td>Consultants, Managers, Academic Reports</td>
-              <td>Native OpenXML headings, styled tables, monospace code</td>
-              <td>Supported (clean output)</td>
+              <td>OpenXML headings, bordered <code>w:tbl</code> tables, code blocks</td>
+              <td>Clean export (no watermarks)</td>
               <td>Pro</td>
             </tr>
             <tr>
               <td><strong>Vector Print PDF</strong></td>
-              <td>Client handoffs, Archiving, Legal/Compliance</td>
-              <td>A4 Portrait or Landscape, custom CSS theme, TOC</td>
+              <td>Client handoffs, Compliance archiving</td>
+              <td>A4 Portrait or Landscape, TOC, selectable text</td>
               <td>Supported (watermarked in Free)</td>
               <td>Free / Pro</td>
             </tr>
             <tr>
               <td><strong>Obsidian Markdown (.md)</strong></td>
-              <td>Developers, PKM &amp; Notion/Obsidian workflows</td>
+              <td>Developers, PKM &amp; Notion workflows</td>
               <td>YAML frontmatter, clean fenced code blocks, LaTeX</td>
               <td>Supported</td>
               <td>Free / Pro</td>
             </tr>
             <tr>
               <td><strong>Standalone Offline HTML</strong></td>
-              <td>Interactive web sharing &amp; stakeholder decks</td>
-              <td>24 Base46-inspired light/dark themes, zero CDN</td>
+              <td>Shareable stakeholder specs</td>
+              <td>24 light/dark themes, zero external CDNs</td>
               <td>Supported</td>
               <td>Free / Pro</td>
             </tr>
             <tr>
               <td><strong>All Code Blocks (.zip)</strong></td>
               <td>Software &amp; Data Engineers</td>
-              <td>Language-aware filenames packaged cleanly in memory</td>
-              <td>Clean code without watermarks</td>
+              <td>Auto-named source files bundled in browser RAM</td>
+              <td>Clean files without stamps</td>
               <td>Pro</td>
             </tr>
             <tr>
               <td><strong>Cross-AI Context Bundle</strong></td>
-              <td>Power users switching ChatGPT ↔ Claude ↔ DeepSeek</td>
-              <td>Token-counted CtxPort v2 handoff prompt</td>
+              <td>Multi-model users (ChatGPT &harr; Claude)</td>
+              <td>Token-estimated CtxPort v2 handoff prompt</td>
               <td>Supported</td>
               <td>Free</td>
             </tr>
@@ -298,29 +349,35 @@ ChatGPT: Sure! Here is a comparison:
     </div>
   </section>
 
-  <section class="section" id="install">
+  <section class="section section-paper" id="install">
     <div class="container">
-      <h2>Browser Store Availability &amp; Licensing</h2>
-      <p class="section-lead">Install free in one click. Upgrade only if you need native <code>.docx</code>, watermark-free exports, Executive Report Mode, or automated PII redaction.</p>
+      <h2>Install Free &amp; Simple Pro Licensing</h2>
+      <p class="section-lead">Start free without creating an account. Upgrade via Gumroad with instant License Key delivery on up to 3 desktop devices.</p>
 
       <div class="store-row">
         <div class="store-box">
-          <span class="status-badge status-review">Awaiting Review · Submitted</span>
-          <strong>Firefox Add-ons (AMO)</strong>
-          <span style="font-size:13.5px;color:var(--ink-muted);">Zero-warning MV3 package verified by Mozilla Add-ons validator. Supports desktop Firefox.</span>
+          <div>
+            <span class="status-badge status-review">Awaiting Review &middot; Submitted</span>
+            <h3 style="margin:12px 0 6px;font-size:18px;">Firefox Add-ons (AMO)</h3>
+            <p style="margin:0;font-size:13.5px;color:var(--ink-body);">Passed Mozilla validator with 0 errors and 0 warnings across desktop Firefox.</p>
+          </div>
           <a class="btn btn-sm" href="https://addons.mozilla.org/en-US/firefox/addon/chatcraft-pdf-word-markdown/" target="_blank" rel="noopener">View Firefox Store Listing</a>
         </div>
         <div class="store-box">
-          <span class="status-badge status-review">In Review · Store ID 0RDCKF06G05C</span>
-          <strong>Microsoft Edge Add-ons</strong>
-          <span style="font-size:13.5px;color:var(--ink-muted);">Submitted across all 241 markets with 8 localized store descriptions. Review takes up to 7 business days.</span>
-          <a class="btn btn-sm" href="https://microsoftedge.microsoft.com/addons/detail/cekifgchmlalomiilpingheppnoapncf" target="_blank" rel="noopener">Edge Add-ons Direct Link</a>
+          <div>
+            <span class="status-badge status-review">In Review &middot; ID 0RDCKF06G05C</span>
+            <h3 style="margin:12px 0 6px;font-size:18px;">Microsoft Edge Add-ons</h3>
+            <p style="margin:0;font-size:13.5px;color:var(--ink-body);">Submitted across 241 global markets in all 8 localized store languages.</p>
+          </div>
+          <a class="btn btn-sm" href="https://microsoftedge.microsoft.com/addons/detail/cekifgchmlalomiilpingheppnoapncf" target="_blank" rel="noopener">Open Edge Listing Link</a>
         </div>
         <div class="store-box">
-          <span class="status-badge status-soon">Planned Release</span>
-          <strong>Chrome Web Store</strong>
-          <span style="font-size:13.5px;color:var(--ink-muted);">Identical Chromium MV3 package tested for Chrome, Brave, Arc, and Vivaldi browsers.</span>
-          <a class="btn btn-sm" href="./showcase/distributed-system-report.html">Preview Sample Output First</a>
+          <div>
+            <span class="status-badge status-soon">Planned Follow-Up</span>
+            <h3 style="margin:12px 0 6px;font-size:18px;">Chrome Web Store</h3>
+            <p style="margin:0;font-size:13.5px;color:var(--ink-body);">Identical Chromium MV3 package built for Chrome, Brave, Arc, and Vivaldi.</p>
+          </div>
+          <a class="btn btn-sm" href="./showcase/distributed-system-report.html">Inspect Sample Output First</a>
         </div>
       </div>
 
@@ -329,66 +386,70 @@ ChatGPT: Sure! Here is a comparison:
           <div>
             <strong>Free Edition</strong>
             <div class="tier-price">$0 <span>forever</span></div>
-            <p style="font-size:14px;color:var(--ink-muted);">No account required. Core workflows work immediately offline.</p>
+            <p style="font-size:14px;color:var(--ink-muted);">Core extraction &amp; Markdown workflows with zero account required.</p>
             <ul class="feature-list">
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Full Conversation &amp; Prompts extraction</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Cross-AI Context Bundle &amp; Markdown</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> PDF &amp; HTML export (with trial watermark)</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Default Light Modern theme</li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Full Conversation &amp; Prompts extraction</li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Cross-AI Context Bundle &amp; Markdown</li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> PDF &amp; HTML export (with trial watermark)</li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Default Light Modern theme</li>
             </ul>
           </div>
-          <a class="btn" style="margin-top:20px;" href="https://addons.mozilla.org/en-US/firefox/addon/chatcraft-pdf-word-markdown/" target="_blank" rel="noopener">Install Free Edition</a>
+          <a class="btn" style="margin-top:22px;" href="https://addons.mozilla.org/en-US/firefox/addon/chatcraft-pdf-word-markdown/" target="_blank" rel="noopener">Install Free Edition</a>
         </div>
 
         <div class="tier-panel featured">
           <div>
             <strong>Lifetime Pro Deal</strong>
             <div class="tier-price">$14.90 <span>one-time</span></div>
-            <p style="font-size:14px;color:var(--ink-muted);">Pay once via Gumroad. Activate instantly across up to 3 devices.</p>
+            <p style="font-size:14px;color:var(--ink-muted);">Pay once via Gumroad. Activate immediately on up to 3 machines.</p>
             <ul class="feature-list">
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Clean, watermark-free PDF, HTML &amp; Markdown</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Native Microsoft Word (<code>.docx</code>) compiler</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Executive Report Mode &amp; auto Table of Contents</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> GDPR Auto-Redaction + All 24 Light/Dark themes</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Download All Code Blocks as <code>.zip</code></li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Clean, watermark-free PDF, HTML &amp; Markdown</li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Native Microsoft Word (<code>.docx</code>) compiler</li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Executive Report Mode &amp; auto Table of Contents</li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> GDPR Auto-Redaction + All 24 Light/Dark themes</li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Download All Code Blocks as <code>.zip</code></li>
             </ul>
           </div>
-          <a class="btn btn-primary" style="margin-top:20px;" href="https://yujun57.gumroad.com/l/chatcraft-pro-lifetime" target="_blank" rel="noopener">Get Lifetime Pro ($14.90)</a>
+          <a class="btn btn-primary" style="margin-top:22px;" href="https://yujun57.gumroad.com/l/chatcraft-pro-lifetime" target="_blank" rel="noopener">Get Lifetime Pro ($14.90)</a>
         </div>
 
         <div class="tier-panel">
           <div>
             <strong>Monthly Pro</strong>
             <div class="tier-price">$2.99 <span>/ month</span></div>
-            <p style="font-size:14px;color:var(--ink-muted);">Full Pro access for short client sprints. Cancel anytime on Gumroad.</p>
+            <p style="font-size:14px;color:var(--ink-muted);">Flexible monthly option for short sprints. Cancel anytime on Gumroad.</p>
             <ul class="feature-list">
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Every Pro export format &amp; theme unlocked</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Automatic 72-hour background license check</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Instant email delivery of your License Key</li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Every Pro export format &amp; theme unlocked</li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Silent 72-hour background license check</li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Instant email delivery of your License Key</li>
             </ul>
           </div>
-          <a class="btn" style="margin-top:20px;" href="https://yujun57.gumroad.com/l/chatcraft-pro-monthly" target="_blank" rel="noopener">Subscribe ($2.99/mo)</a>
+          <a class="btn" style="margin-top:22px;" href="https://yujun57.gumroad.com/l/chatcraft-pro-monthly" target="_blank" rel="noopener">Subscribe ($2.99/mo)</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section section-alt">
+  <section class="section">
     <div class="container">
-      <h2>Frequently Asked Questions</h2>
-      <p class="section-lead">Straight answers on security, licensing, and format fidelity.</p>
+      <h2>Technical &amp; Licensing Questions</h2>
+      <p class="section-lead">Straight facts on offline privacy, platform compatibility, and license limits.</p>
       <div class="faq-list">
         <details open>
-          <summary>Does ChatCraft upload my AI conversations to a server to build Word (.docx) or PDF files?</summary>
-          <p>No. Every OpenXML <code>.docx</code> file, <code>.zip</code> code archive, Markdown document, and printable PDF layout is built purely inside your browser memory using bundled scripts. Your chat logs never leave your machine.</p>
+          <summary>Does ChatCraft upload my AI conversations to build Word (.docx) or PDF files?</summary>
+          <p>No. Every OpenXML <code>.docx</code> package, <code>.zip</code> code archive, Markdown document, and printable PDF layout is built purely inside your browser memory using bundled scripts. Your chat logs never leave your machine.</p>
         </details>
         <details>
-          <summary>Which AI platforms work out of the box?</summary>
-          <p>ChatGPT (<code>chatgpt.com</code> / <code>chat.openai.com</code>), Claude (<code>claude.ai</code>), Google Gemini (<code>gemini.google.com</code>), DeepSeek (<code>chat.deepseek.com</code>), Grok (<code>grok.com</code>), Perplexity, and Microsoft Copilot — plus a right-click Selection Importer and Markdown paste parser for any other page.</p>
+          <summary>Does it work on mobile iOS or Android browsers?</summary>
+          <p>No. ChatCraft Studio Pro is engineered specifically for desktop browsers (Microsoft Edge, Firefox, and Chromium desktop) where full-screen document layout and local file saving work reliably.</p>
         </details>
         <details>
-          <summary>How does Pro license activation work without a ChatCraft user account?</summary>
-          <p>Gumroad generates a unique license key immediately after checkout. Paste that key inside the extension Studio and it verifies directly against Gumroad’s official <code>api.gumroad.com/v2/licenses/verify</code> API.</p>
+          <summary>What happens when an AI platform changes its webpage DOM layout?</summary>
+          <p>ChatCraft applies a three-layer fallback architecture: provider selectors, semantic turn heuristics, and a built-in right-click Selection Importer plus Markdown parser inside the Studio.</p>
+        </details>
+        <details>
+          <summary>How does Pro activation work without creating a ChatCraft account?</summary>
+          <p>Gumroad generates your unique License Key automatically upon checkout. Paste it into the extension Studio and it verifies directly against Gumroad’s official <code>api.gumroad.com/v2/licenses/verify</code> API.</p>
         </details>
       </div>
     </div>
@@ -400,7 +461,7 @@ ChatGPT: Sure! Here is a comparison:
     <div class="footer-grid">
       <div>
         <h3>ChatCraft Studio Pro</h3>
-        <p>100% local browser extension for Edge, Firefox, and Chrome. Turn AI conversations into publication-grade Word (.docx), PDF, Markdown, and Code ZIP deliverables without cloud uploads.</p>
+        <p>100% local browser extension for Edge, Firefox, and Chrome. Turn AI conversations into native Word (.docx), Vector PDF, Markdown, and Code ZIP deliverables with zero cloud uploads.</p>
       </div>
       <div>
         <h3>Workflows</h3>
@@ -431,8 +492,8 @@ ChatGPT: Sure! Here is a comparison:
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 ChatCraft Studio Pro · Yujun Cui</span>
-      <span>Zero external telemetry · Works offline inside your browser</span>
+      <span>&copy; 2026 ChatCraft Studio Pro &middot; Yujun Cui</span>
+      <span>Desktop Chrome, Edge &amp; Firefox &middot; Zero external telemetry</span>
     </div>
   </div>
 </footer>
